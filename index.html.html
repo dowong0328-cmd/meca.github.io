@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 앵커사업 MECA 인재양성 프로그램 안내</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+:root{
+  --ink:#16202E;--ink-2:#4A5568;--ink-3:#8A93A0;
+  --line:#E4E7EC;--bg:#F6F7F9;
+  --g:#185FA5;--g-bg:#E6F1FB;
+  --p:#534AB7;--p-bg:#EEEDFE;
+  --c:#854F0B;--c-bg:#FAEEDA;
+  --M:#185FA5;--M-bg:#E6F1FB;
+  --E:#0F6E56;--E-bg:#E1F5EE;
+  --C:#993C1D;--C-bg:#FAECE7;
+  --A:#534AB7;--A-bg:#EEEDFE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Pretendard','Malgun Gothic',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+header{background:#fff;border-bottom:1px solid var(--line);padding:52px 0 36px}
+header .eyebrow{font-size:13px;font-weight:700;color:var(--ink-3);letter-spacing:.5px;margin-bottom:10px}
+header h1{font-size:32px;font-weight:800;letter-spacing:-1.2px;line-height:1.28}
+header .lede{color:var(--ink-2);margin-top:10px;font-size:15px}
+.meca{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.meca button{flex:1;min-width:130px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;font-family:inherit;transition:border-color .12s}
+.meca button:hover{border-color:var(--ink-3)}
+.meca button[aria-expanded="true"]{border-color:currentColor}
+.meca b{display:block;font-size:22px;font-weight:800;line-height:1.1}
+.meca .nm{font-size:12.5px;color:var(--ink-2);display:block}
+.meca .cnt{font-size:11.5px;color:var(--ink-3);display:block;margin-top:3px}
+.meca button[data-m="M"]{color:var(--M)} .meca button[data-m="E"]{color:var(--E)}
+.meca button[data-m="C"]{color:var(--C)} .meca button[data-m="A"]{color:var(--A)}
+#depts{display:none;margin-top:10px;border-radius:10px;padding:16px 18px}
+#depts.open{display:block}
+#depts h3{font-size:14px;font-weight:700;margin-bottom:10px}
+#depts .tags{display:flex;flex-wrap:wrap;gap:6px}
+#depts .tag{background:rgba(255,255,255,.75);border-radius:6px;padding:5px 10px;font-size:13px;font-weight:600}
+
+.bar{position:sticky;top:0;z-index:10;background:rgba(246,247,249,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}
+.chips{display:flex;gap:8px;overflow-x:auto}
+.chip{flex:none;border:1px solid var(--line);background:#fff;color:var(--ink-2);border-radius:20px;padding:7px 14px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+
+section{padding:40px 0}
+h2{font-size:20px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px}
+.sub{color:var(--ink-3);font-size:14px;margin-bottom:20px}
+.info{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+.info dl,.body dl{display:grid;grid-template-columns:96px 1fr;gap:10px 12px;font-size:14px}
+.info dt,.body dt{color:var(--ink-3);font-weight:600}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.card summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.card summary::-webkit-details-marker{display:none}
+.card summary:hover{background:#FAFBFC}
+.tagline{font-size:12px;font-weight:600;color:var(--ink-3);margin-bottom:3px}
+.title{font-size:17px;font-weight:700;letter-spacing:-.3px}
+.blurb{font-size:14px;color:var(--ink-2);margin-top:4px}
+.amt{font-size:15px;font-weight:800;margin-top:8px}
+.who{flex:none;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.who.g{background:var(--g-bg);color:var(--g)}.who.p{background:var(--p-bg);color:var(--p)}.who.c{background:var(--c-bg);color:var(--c)}
+.body{padding:16px 20px 20px;border-top:1px solid var(--line)}
+.flags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.flag{background:#FFF6E5;color:#854F0B;font-size:12px;padding:4px 9px;border-radius:5px}
+.cal{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cal>div{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.cal>div:last-child{border-bottom:none}
+.cal b{color:var(--ink-3);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+td,th{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#FAFBFC;font-size:13px;color:var(--ink-2);width:110px}
+tr:last-child td{border-bottom:none}
+footer{background:#fff;border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--ink-2)}
+footer b{display:block;margin-bottom:6px;font-size:15px;color:var(--ink)}
+.todo{background:#FFF6E5;border:1px dashed #BA7517;color:#854F0B;border-radius:5px;padding:2px 8px;display:inline-block}
+
+.tools{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;gap:8px}
+.tools button{border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:24px;padding:10px 18px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.14)}
+.tools button.on{background:var(--ink);color:#fff}
+.tools button.save{display:none;background:#1D9E75;border-color:#1D9E75;color:#fff}
+body.edit .tools button.save{display:inline-block}
+body.edit [contenteditable]{outline:1px dashed #7F77DD;outline-offset:3px;border-radius:3px;min-width:20px}
+body.edit [contenteditable]:focus{outline:2px solid #534AB7;background:#F7F6FF}
+.hint{display:none;background:#EEEDFE;color:#3C3489;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:16px;line-height:1.6}
+body.edit .hint{display:block}
+
+@media(max-width:640px){
+  header{padding:34px 0 26px} header h1{font-size:24px}
+  .meca button{min-width:calc(50% - 4px)}
+  .info dl,.body dl,.cal>div{grid-template-columns:1fr;gap:2px}
+  .info dt,.body dt{margin-top:8px}
+  .card summary{flex-direction:column-reverse;align-items:flex-start}
+  th{width:auto}
+}
+@media print{.tools,.bar,.hint{display:none!important} #depts{display:block!important} .card details{display:block}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow" data-k="eyebrow">조선대학교 대학원 교학팀 · CSU-MECA 인재양성센터</p>
+    <h1 data-k="h1">2026 광주 탑티어<br>MECA산업 인재양성 프로그램</h1>
+    <p class="lede" data-k="lede">교육부·광주광역시 재원의 앵커사업(RISE) — 대학원생·교원·지역기업을 위한 10개 지원 프로그램</p>
+    <div class="meca" id="meca"></div>
+    <div id="depts"></div>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap chips">
+    <button class="chip" data-f="all" aria-pressed="true">전체</button>
+    <button class="chip" data-f="g" aria-pressed="false">대학원생</button>
+    <button class="chip" data-f="p" aria-pressed="false">교원</button>
+    <button class="chip" data-f="c" aria-pressed="false">기업·재직자</button>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="hint"><b>편집 모드</b> — 파란 점선이 표시된 글자를 클릭해서 고치세요. 다 고쳤으면 <b>파일로 저장</b>을 누르면 수정 내용이 반영된 HTML 파일이 내려받아집니다. 그 파일이 새 버전입니다.</div>
+    <h2>사업 안내</h2>
+    <p class="sub">교육부·광주광역시 재원의 RISE(앵커)사업 중 「Ⅰ-② 광주 탑티어 MECA산업 인재양성」 단위과제입니다.</p>
+    <div class="info">
+      <dl>
+        <dt>사업목적</dt><dd data-k="i1">광주 전략산업 기반 MECA 전문 인재 양성 / 기업친화·수요자 맞춤형 교육을 통한 지역정주형 특화인재 양성</dd>
+        <dt>지원대상</dt><dd data-k="i2">MECA 참여학과 대학원생 및 교원, MECA산업 관련 기업 및 재직자</dd>
+        <dt>2026 사업비</dt><dd data-k="i3">1,989,800천원 (세부과제 5개 / 단위 프로그램 10개)</dd>
+        <dt>참여학과</dt><dd data-k="i4">2026년 기준 <b>31개 학과</b> — 위의 M · E · C · A 카드를 누르면 분야별 학과를 볼 수 있습니다.<br><span style="color:var(--ink-3);font-size:13px">※ 소속 학과의 MECA 분류는 융합 주제로도 인정됩니다. 예) 환경공학과 → E 분야이나 'AI + 에너지' 융합 주제 지원 가능</span></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>프로그램</h2>
+    <p class="sub">카드를 누르면 상세가 열립니다. 위 필터로 해당되는 프로그램만 볼 수 있습니다.</p>
+    <div id="list"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>연간 공모 캘린더</h2>
+    <p class="sub">실제 공고일은 사업단 사정에 따라 조정될 수 있습니다.</p>
+    <div class="cal" id="cal"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>신청 전 꼭 확인하세요</h2>
+    <table>
+      <tr><th>중복 수혜</th><td data-k="n1">당해연도 앵커사업 내 타 단위과제 연구비 지원 프로그램과 중복 지원 불가. 동일·유사 연구로 타 정부재원 사업 수혜 중인 경우 지원 불가.</td></tr>
+      <tr><th>사사 표기</th><td data-k="n2">연구 성과물에 RISE 사사문구 표기 의무 (미표기 시 연구 결과 불인정) · 과제번호 2026-RISE-05-013</td></tr>
+      <tr><th>결과보고</th><td data-k="n3">종료 후 결과보고서 제출 의무. 미제출 시 지원금 환수 및 차년도 참여 제한.</td></tr>
+      <tr><th>학적 요건</th><td data-k="n4">사업 기간 중 휴학·졸업·제적·자퇴 등 학적 변동 예정자는 지원 대상에서 제외됩니다.</td></tr>
+      <tr><th>논문 미게재</th><td data-k="n5">투고 증빙·심사 의견서·재투고 현황·결과보고서를 종합 검토해 성실 수행으로 인정합니다. 미게재 자체는 환수 사유가 아닙니다.</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b data-k="f1">조선대학교 대학원 교학팀 (CSU-MECA 인재양성센터)</b>
+    <span data-k="f2">문의 062-230-**** · 담당자명 입력</span><br>
+    <span data-k="f3">이 안내는 2026년 운영계획서 기준이며, 세부 기준·금액·일정은 각 프로그램 공고문이 우선합니다.</span>
+  </div>
+</footer>
+
+<div class="tools">
+  <button class="save" id="save">파일로 저장</button>
+  <button id="toggle">✎ 내용 수정</button>
+</div>
+
+<script type="application/json" id="DATA">
+{
+"meca":[
+{"k":"M","name":"탄소중립형 모빌리티","depts":["광기술공학과","스마트이동체융합시스템공학과","신소재공학과","항공우주공학과","용접·접합과학공학과"]},
+{"k":"E","name":"광주형 첨단에너지","depts":["건축공학과","기계공학과","전기공학과","첨단에너지공학과","토목공학과","환경공학과","화학공학과","선박해양공학과"]},
+{"k":"C","name":"반도체 소재·패키징","depts":["반도체융합학과","화학과"]},
+{"k":"A","name":"지능형 디지털바이오","depts":["정보통신공학과","전자공학과","경제학과","산업공학과","전산통계학과","경영학과","무역학과","의학과","소방안전방재학과","글로벌바이오융합학과","치의생명공학과","치의학과","데이터사이언스학과","컴퓨터공학과","약학과","인공지능공학과"]}
+],
+"cal":[
+["3월","산학연 공동 기술개발과제(R&BD) 공고 · 캡스톤디자인 과제 발굴"],
+["4월","신진 연구자 공고(4.10)·접수(4.15~30) · 공간 고도화 공모 · 글로벌 필드 챌린지 공고 · PBL 아카데미(1학기)"],
+["5월","신진 연구자 선정(5.20) · 장학금 공고 · 글로벌 접수 · 캡스톤 팀 선발"],
+["6월","공간 서면평가·선정 · 글로벌 팀 선정·OT · 장학생 서면평가"],
+["7~8월","글로벌 현장학습(3~10일) · 공간 구축·기자재 설치 · 장학금 지급"],
+["9월","글로벌 결과보고 · PBL 아카데미(2학기) 공모 · 교육과정 운영"],
+["10~11월","R&BD 중간점검·기업 현장방문 · 프로젝트 Lab 최종 발표"],
+["12~1월","전 프로그램 결과보고 · 성과공유회 · 우수사례 확산"],
+["상시","프로젝트 Lab 애로기술지도(연중 상시) · 세미나·포럼(분기별 공모)"]
+],
+"programs":[
+{
+"w":"p","whoLabel":"교원·학과","cat":"Ⅰ-2-① 교육·연구 인프라 구축",
+"title":"MECA 교육·연구 공간 고도화",
+"blurb":"실습·프로젝트·협업 중심의 참여형 학습 공간과 산학연 공동 활용 공간 조성",
+"amt":"실험·실습 5개실 + 공동교육 2개실 · 총 3.4억원",
+"rows":[
+["지원대상","MECA(앵커사업) 참여학과"],
+["지원항목","구축 공사비 및 교육·연구용 기자재 구입비<br>실험·실습 공간 5실(공사 3,000만 + 기자재 2,000만) / 온·오프라인 공동교육 공간 2실(공사 2,500만 + 기자재 2,000만)"],
+["조성기간","2026. 3월 ~ 8월 (9월부터 활용)"],
+["추진절차","공모(4월) → 접수(5~6월) → 서면평가·선정(6월) → 실측·구축(7~8월)"],
+["제출서류","신청서 / 연구공간 개선 계획서(5P) / 공간 활용 및 연구계획서(10P)"],
+["평가기준","MECA 연계성 30 · 필요성 및 활용계획 40 · RISE 전략 정합성 30"]
+],
+"flags":["구축 공간·기자재 RISE 재원 표기 의무","활용 계획서 내 성과목표 설정"]
+},
+{
+"w":"g","whoLabel":"대학원생","cat":"Ⅰ-2-② 맞춤형 연구 활동 지원",
+"title":"석·박사 장학금",
+"blurb":"우수 인재의 이탈을 막고 연구에 전념할 수 있도록 학업·연구 활동 지원",
+"amt":"석사 180만원(100명) · 박사 250만원(50명)",
+"rows":[
+["지원대상","MECA 분야 석·박사 재학생 / 산학협력 프로젝트·연구과제 참여 대학원생"],
+["운영기간","2026. 5월 ~ 2027. 2월"],
+["평가기준","학업 성취도 40(직전 학기 3.5 이상) · 연구/진로 계획서 60"],
+["제출서류","장학금 신청서 / 성적·재학증명서 / 연구·진로 계획서(10P)"],
+["일정","공고 5월 → 서면평가 6월 → 선정 7월 → 지급 9월~"]
+],
+"flags":["단순 생활비성 장학금 불가","앵커사업 참여도·실적 반영 필수"]
+},
+{
+"w":"g","whoLabel":"대학원생","cat":"Ⅰ-2-② 맞춤형 연구 활동 지원",
+"title":"신진 연구자(Rookie) 연구지원",
+"blurb":"국제전문학술지 게재를 목표로 하는 연구 초기 단계 대학원생 연구비 지원",
+"amt":"SCOPUS 400만 · SCIE 600만 · Advanced SCIE 800만원",
+"rows":[
+["지원대상","MECA 분야 석·박사 재학생 및 수료연구생 / 논문 소속을 조선대학교로 표기 가능한 자<br>※ Advanced SCIE는 1차년도 논문 게재자에 한함"],
+["지원규모","SCOPUS 20건 · SCIE 90건 · Advanced SCIE 5건 (총 6.83억원)"],
+["연구기간","2026. 5월 ~ 2027. 1월"],
+["예산편성","재료비 65% · 출장비 10% 이내 · 회의비 5% 이내 · 논문게재료 10% · 지재권 10%"],
+["평가방법","내·외부 위원 5인 서면평가 / 70점 이상 고득점 순<br>신청자 역량 40 · 연구계획 적절성 40 · 발전가능성 20"],
+["제출서류","참여 신청서 / 연구계획서(5P) / 지도교수 대표 연구업적 현황 / 지도교수 확인서 / 개인정보 동의서 / 재학증명서"],
+["일정","공고 4.10 → 접수 4.15~4.30 → 평가 5.1~5.15 → 선정 5.20"]
+],
+"flags":["사사문구 표기 의무","결과보고서 제출 의무","중복 수혜 불가","논문 미게재는 환수 사유 아님"]
+},
+{
+"w":"p","whoLabel":"교원·연구팀","cat":"Ⅰ-2-② 맞춤형 연구 활동 지원",
+"title":"산학연 연구활동 시너지 지원 (세미나·포럼)",
+"blurb":"학술 교류와 공동연구·산학연 협력 네트워크 확대를 위한 세미나·포럼 운영",
+"amt":"세미나 회당 200만원(40회) · 포럼 회당 1,000만원(5회)",
+"rows":[
+["지원대상","MECA 참여학과 교원, 석·박사 대학원생 연구팀 (Rookie 참여 이력 우대)"],
+["운영방식","세미나 — 개별 연구 발표·토론, 지역기업·출연연 전문가 초청(5~50명, 60~120분)<br>포럼 — 석·박사 중간·최종 성과 발표, 지역 산업계 토론·자문(50명 이상, 90~180분)"],
+["운영기간","2026. 3월 ~ 2027. 1월 (분기별 공모·심사·운영)"],
+["평가기준","MECA 적합성 20 · 지역 산학협력 연계성 20 · 구체성 20 · 협력연구 모델 20 · 기대성과 20"]
+],
+"flags":[]
+},
+{
+"w":"p","whoLabel":"교원","cat":"Ⅰ-2-③ 맞춤형 교육과정 개발·운영",
+"title":"기업수요 맞춤형 교육과정 개발",
+"blurb":"기업 수요 기반 교과목을 공동 설계해 실무형 인재 양성",
+"amt":"4과목 개발 · 교재 원고료 과목당 200만원",
+"rows":[
+["지원대상","MECA 분야 교원 (교과목당 참여기업 2개사 연계 필수)"],
+["내용","기술·직무 수요조사 → 모듈형·트랙형 커리큘럼(기초〉심화〉응용) 설계 → PBL 운영<br>이론 40% + 프로젝트 기반 학습 40% + 기업 현장 멘토링 20%"],
+["운영기간","2026. 3월 ~ 2027. 1월 (‘26-2학기 교과 편성 반영)"],
+["추진절차","수요조사(3~4월) → 교육과정 개발(5~7월) → 위원회 심의·편성(8월) → 운영(9~11월) → 결과보고(12~1월)"]
+],
+"flags":["현장 사례 중심 강의 — 기업 참여 20% 이상"]
+},
+{
+"w":"g","whoLabel":"대학원생","cat":"Ⅰ-2-③ 맞춤형 교육과정 개발·운영",
+"title":"지역문제 해결형 캡스톤디자인",
+"blurb":"광주 지역기업·지자체와 협력해 실제 산업·사회 현안을 기술로 해결",
+"amt":"6개 팀 × 팀당 500만원",
+"rows":[
+["지원대상","MECA 참여학과 대학원생(석·박사) — 지역 기업·기관·지자체 연계 과제 필수"],
+["수행흐름","문제 정의 → 프로젝트 수행 → 실험·검증, 시제품 제작 → 결과 분석 및 매뉴얼 구축"],
+["예산편성","재료비 70% · 회의비 10% 이내 · 자문비 8% · 지재권 8% · 출장비 4% 이내"],
+["운영기간","2026. 3월 ~ 2027. 1월"],
+["추진절차","과제 발굴·공모(3~4월) → 팀 선발(5~6월) → 중간점검·멘토링(7~8월) → 운영(9~10월) → 결과보고(11~1월)"]
+],
+"flags":[]
+},
+{
+"w":"c","whoLabel":"교원·대학원생·기업","cat":"Ⅰ-2-③ 맞춤형 교육과정 개발·운영",
+"title":"프로젝트 Lab 기반 애로기술지도",
+"blurb":"기업 현장의 기술적 애로사항을 대학원생 참여 프로젝트로 해결",
+"amt":"연 60회 · 자문수당 회당 25만원",
+"rows":[
+["지원대상","MECA 참여학과 대학원생·교원 + 광주·전남 MECA 기업<br>팀 구성: 대학원생·재직자 3~5명 + 교원 1인 + 기업 멘토 1인"],
+["지원유형","<b>현장 애로 해결형</b> — 공정 불량률 저감, 시제품 성능 개선, 품질관리 체계, 에너지 효율 개선<br><b>기술 고도화형</b> — AI 예지보전, 공정 최적화, 디지털 트윈·자동화, 친환경 공정 전환"],
+["운영기간","2026. 3월 ~ 12월 (연중 상시 공모)"],
+["추진절차","수요조사·과제 발굴(4월) → 팀 구성·OT(5~8월) → 중간점검 월 1회 → 최종 발표(11월) → 결과보고(12~1월)"]
+],
+"flags":[]
+},
+{
+"w":"c","whoLabel":"교원·기업","cat":"Ⅰ-2-④ 재직자 역량 강화",
+"title":"산학연 공동 기술개발과제 (R&BD)",
+"blurb":"시제품 제작·기술 검증부터 특허 출원, 기술이전 컨설팅까지 지원",
+"amt":"7~8개 과제 · 과제당 3,000만원 내외",
+"rows":[
+["지원대상","기업–대학 공동 연구팀 (교수 + 기업 재직자 + 대학원생 2인 이상 필수)<br>우선지원 — 지역 중소·중견기업(매출 5,000억 이하), 창업 3년 이상"],
+["과제유형","<b>성과 연계형</b> — 1차년도 우수과제의 실증 전환(시제품·현장 테스트·성능 검증)<br><b>애로기술 밀착형</b> — 기업–MECA학과 Lab 매칭 애로기술 해결"],
+["연구기간","2026. 5월 ~ 2027. 12월"],
+["필수실적","① 논문 1건 + 지재권 출원·등록 1건 ② 참여기업 외 애로기술지도 1건 ③ 학위과정 교과목 1건 개발 ④ 재직자 교육 2회 ⑤ 연구노트 제출"],
+["평가기준","기술적 우수성 25 · 산업적 파급효과 25 · 연구팀 구성 25 · 추진계획·기대성과 25"],
+["제출서류","과제 신청서 / NTIS 유사성 검토 결과지 / 참여기업 확인서 / 사업자등록증·재무제표 / 연구계획서(20P)"]
+],
+"flags":["교원 1인당 연 1과제 제한","기업 연구진 20% 이상 참여","실적 미달성 시 차년도 참여 제한"]
+},
+{
+"w":"c","whoLabel":"교원(운영)·재직자","cat":"Ⅰ-2-④ 재직자 역량 강화",
+"title":"PBL 기반 업스킬링 아카데미",
+"blurb":"MECA 4대 분야 기술 변화에 대응하는 지역기업 재직자 직무 교육",
+"amt":"연 40회 · 내부 강사 1일 15만원 / 외부 20~100만원",
+"rows":[
+["운영구분","<b>학위과정</b> — 강의 2시간 이상 / 수강 2~3명 이상 (외부 강사)<br><b>비학위과정</b> — 강의 4시간 이상 / 수강 5명 이상 (내부 강사 필수)"],
+["교육방식","온·오프라인 혼합 (ZOOM / 대학 강의실·기업 세미나실), 상시 접수"],
+["교육내용","M — 전기·수소차, 자율주행, BMS 실습 / E — 태양광·수소·ESS, 스마트그리드<br>C — 반도체 소재, 첨단 패키징 / A — AI 신약개발, 헬스케어 데이터 분석"],
+["운영기간","2026. 3월 ~ 2027. 1월 (1학기 4월 / 2학기 9월 공모)"],
+["평가기준","교육과정 적합성 25 · 프로젝트 수행 역량 30 · 인프라 활용 20 · 성과 창출 25"]
+],
+"flags":["이수율 80% 이상","교육 완료 15일 이내 결과보고"]
+},
+{
+"w":"g","whoLabel":"대학원생·지도교원","cat":"Ⅰ-2-⑤ 글로벌 필드 챌린지",
+"title":"글로벌 현장 프로젝트 (Global Field Challenge)",
+"blurb":"단순 방문형 연수가 아닌, 해외 기관의 과제를 직접 수행하는 실무형 글로벌 프로그램",
+"amt":"5~7개 팀 · 1인당 최대 500만원",
+"rows":[
+["지원대상","MECA 참여학과 대학원생 및 해당 학기 등록 수료연구생<br>MECA 단위 프로그램 우수성과자 우대 / 해외 현장학습 수행 가능한 자"],
+["팀구성","지도교수 1명 + 학생 3명 이상, 팀당 6명 내외"],
+["과제유형","<b>해외 기관 연계형</b> — 공동 연구형 / 정책·제도 분석형 / 실증·검증형<br><b>해외 기업 연계형</b> — 기술애로 해결형 / 제품·서비스 개발형"],
+["지원항목","항공료·숙박비·식비·현지 교통비·보험료·프로그램 참가비 등 현장학습 제반 경비"],
+["운영기간","2026. 5월 ~ 12월 (현장학습 3~10일, 해외 기관 일정에 따라 변동)"],
+["사전교육","프로젝트 OT · 기획·관리(WBS) · 연구윤리 · 지식재산권/보안 · 글로벌 커뮤니케이션 · 다문화 이해 · 안전·위기대응 · 연구개발/기업문제 해결 실무 (총 28h)"],
+["평가기준","전공 적합도 40 (연계성 25 / 활용 가능성 15) · 연수계획 우수성 60 (목적 적합성 20 / 실행계획 20 / 예산 10 / 기대성과 10)"],
+["제출서류","(신청) 참여신청서 / 수행 계획서(5P) / 개인정보제공동의서 / 참여기관 확인서<br>(결과) 활동일지 / 최종 결과보고서 / 발표 자료 / 만족도 조사지"],
+["추진절차","공고(4월) → 접수·컨설팅(5~6월) → 팀 선정·OT(6월) → 현장학습(7~8월) → 결과보고(9월) → 성과확산(12~1월)"]
+],
+"flags":[]
+}
+]
+}
+</script>
+
+<script>
+var D = JSON.parse(document.getElementById('DATA').textContent);
+var open = null;
+
+function renderMeca(){
+  var box = document.getElementById('meca');
+  box.innerHTML = D.meca.map(function(m,i){
+    return '<button data-m="'+m.k+'" data-i="'+i+'" aria-expanded="false">'+
+      '<b>'+m.k+'</b><span class="nm" data-mk="'+i+'">'+m.name+'</span>'+
+      '<span class="cnt">'+m.depts.length+'개 학과 보기</span></button>';
+  }).join('');
+  box.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var i = +b.dataset.i;
+      if(open === i){ closeDepts(); return; }
+      open = i;
+      box.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-expanded', x===b ? 'true':'false'); });
+      var m = D.meca[i], panel = document.getElementById('depts');
+      panel.style.background = 'var(--'+m.k+'-bg)';
+      panel.style.color = 'var(--'+m.k+')';
+      panel.innerHTML = '<h3>'+m.k+' · '+m.name+' — '+m.depts.length+'개 학과</h3><div class="tags">'+
+        m.depts.map(function(d,j){ return '<span class="tag" data-mi="'+i+'" data-dj="'+j+'">'+d+'</span>'; }).join('')+'</div>';
+      panel.classList.add('open');
+      if(document.body.classList.contains('edit')) setEditable(true);
+    });
+  });
+}
+function closeDepts(){
+  open = null;
+  document.getElementById('depts').classList.remove('open');
+  document.querySelectorAll('#meca button').forEach(function(x){ x.setAttribute('aria-expanded','false'); });
+}
+
+function render(){
+  var list = document.getElementById('list');
+  list.innerHTML = '';
+  D.programs.forEach(function(p,i){
+    var d = document.createElement('details');
+    d.className = 'card'; d.dataset.w = p.w;
+    var rows = p.rows.map(function(r,j){
+      return '<dt data-p="'+i+'" data-r="'+j+'" data-c="0">'+r[0]+'</dt><dd data-p="'+i+'" data-r="'+j+'" data-c="1">'+r[1]+'</dd>';
+    }).join('');
+    var flags = p.flags.map(function(f,j){
+      return '<span class="flag" data-p="'+i+'" data-g="'+j+'">'+f+'</span>';
+    }).join('');
+    d.innerHTML =
+      '<summary><div>'+
+        '<p class="tagline" data-p="'+i+'" data-k="cat">'+p.cat+'</p>'+
+        '<p class="title" data-p="'+i+'" data-k="title">'+p.title+'</p>'+
+        '<p class="blurb" data-p="'+i+'" data-k="blurb">'+p.blurb+'</p>'+
+        '<p class="amt" data-p="'+i+'" data-k="amt">'+p.amt+'</p>'+
+      '</div><span class="who '+p.w+'" data-p="'+i+'" data-k="whoLabel">'+p.whoLabel+'</span></summary>'+
+      '<div class="body"><dl>'+rows+'</dl>'+(flags?'<div class="flags">'+flags+'</div>':'')+'</div>';
+    list.appendChild(d);
+  });
+  document.getElementById('cal').innerHTML = D.cal.map(function(c,i){
+    return '<div><b data-cal="'+i+'" data-c="0">'+c[0]+'</b><span data-cal="'+i+'" data-c="1">'+c[1]+'</span></div>';
+  }).join('');
+  renderMeca();
+}
+render();
+
+document.querySelectorAll('.chip').forEach(function(chip){
+  chip.addEventListener('click', function(){
+    document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed','false');});
+    chip.setAttribute('aria-pressed','true');
+    var f = chip.dataset.f;
+    document.querySelectorAll('.card').forEach(function(card){
+      card.style.display = (f==='all'||card.dataset.w===f) ? '' : 'none';
+    });
+  });
+});
+
+var SEL = '[data-k],[data-p][data-r],[data-p][data-g],[data-cal],[data-mk],[data-mi]';
+var editing = false;
+function setEditable(on){
+  document.querySelectorAll(SEL).forEach(function(el){
+    if(on) el.setAttribute('contenteditable','true'); else el.removeAttribute('contenteditable');
+  });
+}
+document.getElementById('toggle').addEventListener('click', function(){
+  editing = !editing;
+  document.body.classList.toggle('edit', editing);
+  this.classList.toggle('on', editing);
+  this.textContent = editing ? '수정 끝내기' : '✎ 내용 수정';
+  setEditable(editing);
+  document.querySelectorAll('details.card').forEach(function(d){ if(editing) d.open = true; });
+  if(!editing) collect();
+});
+
+function collect(){
+  document.querySelectorAll('[data-p][data-r]').forEach(function(el){
+    D.programs[+el.dataset.p].rows[+el.dataset.r][+el.dataset.c] = el.innerHTML;
+  });
+  document.querySelectorAll('[data-p][data-g]').forEach(function(el){
+    D.programs[+el.dataset.p].flags[+el.dataset.g] = el.innerHTML;
+  });
+  document.querySelectorAll('[data-p][data-k]').forEach(function(el){
+    D.programs[+el.dataset.p][el.dataset.k] = el.innerHTML;
+  });
+  document.querySelectorAll('[data-cal]').forEach(function(el){
+    D.cal[+el.dataset.cal][+el.dataset.c] = el.innerHTML;
+  });
+  document.querySelectorAll('[data-mk]').forEach(function(el){
+    D.meca[+el.dataset.mk].name = el.innerHTML;
+  });
+  document.querySelectorAll('[data-mi]').forEach(function(el){
+    D.meca[+el.dataset.mi].depts[+el.dataset.dj] = el.innerHTML;
+  });
+}
+
+document.getElementById('save').addEventListener('click', function(){
+  collect();
+  setEditable(false);
+  document.body.classList.remove('edit');
+  closeDepts();
+  document.getElementById('DATA').textContent = JSON.stringify(D, null, 1);
+  document.getElementById('list').innerHTML = '';
+  document.getElementById('cal').innerHTML = '';
+  document.getElementById('meca').innerHTML = '';
+  document.getElementById('depts').innerHTML = '';
+  var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([html], {type:'text/html;charset=utf-8'}));
+  a.download = 'MECA_가이드_' + new Date().toISOString().slice(0,10) + '.html';
+  a.click();
+  render();
+  editing = false;
+  var t = document.getElementById('toggle');
+  t.classList.remove('on'); t.textContent = '✎ 내용 수정';
+});
+</script>
+</body>
+</html>
